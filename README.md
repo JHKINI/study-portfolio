@@ -1,4 +1,4 @@
-# 👋 Hi, I'm JIN
+# 👋 Hi, I'm JH
 
 🎓 I am currently studying at **Korea Polytechnics (폴리텍) Hi-Tech Course**
 💻 Major: **Artificial Intelligence Software**
