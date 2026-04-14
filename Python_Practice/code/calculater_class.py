@@ -1,8 +1,11 @@
 class Calculator:
-    attr_number = []
+    
     def __init__(self,number):
         self.number=number
         self.res_add = None
+        self.res_minus = None
+        self.res_multiply = None    
+        self.res_divide = None
     
     def add(self):
         res = 0
@@ -12,29 +15,31 @@ class Calculator:
         return res
     def minus(self):
         res = self.number[0]
-        for i in self.number[1:]:
-            res -= i
+        for i in range(1, len(self.number)):
+            res -= self.number[i]
+        self.res_minus = res
         return res
     def multiply(self):
         res = 1
         for i in self.number:
             res *= i
+        self.res_multiply = res
         return res
     def divide(self):
         res = self.number[0]
-        for i in self.number[1:]:
-            res /= i
+        for i in range(1, len(self.number)):
+            if self.number[i] == 0:
+                print("0으로 나눌 수 없습니다")
+                return None
+            res /= self.number[i]
+        self.res_divide = res
         return res
 
-
-in_list  = []    
-print("숫자를 3개 입력하세요:")
-for i in range(3):
-    in_list.append(int(input()))
+result = list(map(int, input("숫자 입력(예:1 2 3):  ").split()))
     
-calc = Calculator(in_list)
+calc = Calculator(result)
 
-print(calc._add())       # 덧셈
-print(calc._minus())     # 뺄셈
-print(calc._multiply())  # 곱셈
-print(calc._divide())    # 나눗셈
+print(calc.add())      
+print(calc.minus())    
+print(calc.multiply())  
+print(calc.divide())    

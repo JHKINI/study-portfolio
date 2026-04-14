@@ -16,20 +16,20 @@ class ContactBook:
             if contact.name == name:
                 return contact
         return None
-    def add_contact_from_input(self):
-        name = input("이름을 입력하세요: ")
-        phone = input("전화번호를 입력하세요: ")
-        email = input("이메일을 입력하세요: ")
-        company = input("회사를 입력하세요: ")
-        contact = Contact(name, phone, email, company)
-        self.add_contact(contact)
-pb= ContactBook()
+def input_contact():
+    name = input("등록할 이름을 입력하세요: ")
+    phone = input("전화번호를 입력하세요:000-0000-0000 ")
+    email = input("이메일을 입력하세요: @를 포함한 이메일 주소 ")
+    company = input("회사를 입력하세요: ")
+    return Contact(name, phone, email, company)
+
+c= ContactBook()
 while True:
-    pb.add_contact_from_input()
+    contact = input_contact()
+    c.add_contact(contact)
     search_name = input("검색할 이름을 입력하세요: ")
-    contact = pb.search_contact(search_name)
+    contact = c.search_contact(search_name)
     if contact:
         print("이름: {}, 전화번호: {}, 이메일: {}, 회사: {}".format(contact.name, contact.phone, contact.email, contact.company))
     else:
-        print("연락처를 찾을 수 없습니다.")
-    
+        print("등록되지 않은 연락처입니다.")
