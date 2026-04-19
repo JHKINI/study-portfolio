@@ -1,36 +1,39 @@
 # Python 기초 정리
 
-# 출력 (print)
+---
+
+## 출력 (print)
 
 # print는 값을 화면에 출력할 때 사용
 print("Hello, World!")
-
 print("Have a good day.")
-
 print("Learning Python is fun!")
 
-# 실행 결과
+### 실행 결과
 # Hello, World!
 # Have a good day.
 # Learning Python is fun!
 
+---
 
-# 주석 처리
+## 주석 처리
 
-# 한 줄 주석
+### 한 줄 주석
 # This is a comment
 
-# 실행 막기
+### 실행 막기
 # print("This should not run")
 
+### 여러 줄 주석
 """
 여러 줄 주석
 """
 
 # 코드 설명하거나 실행 제외할 때 사용
 
+---
 
-# 변수
+## 변수
 
 # 변수는 값을 저장하는 공간
 x = 5
@@ -45,13 +48,14 @@ x = "Sally"
 
 print(x)
 
-# 실행 결과
+### 실행 결과
 # 5
 # John
 # Sally
 
+---
 
-# 형 변환 (Casting)
+## 형 변환 (Casting)
 
 # 데이터 타입을 원하는 형태로 변환
 x = str(3)
@@ -62,13 +66,14 @@ print(x)
 print(y)
 print(z)
 
-# 실행 결과
+### 실행 결과
 # 3
 # 3
 # 3.0
 
+---
 
-# 타입 확인
+## 타입 확인
 
 # type()으로 변수 타입 확인
 x = 5
@@ -77,12 +82,13 @@ y = "John"
 print(type(x))
 print(type(y))
 
-# 실행 결과
+### 실행 결과
 # <class 'int'>
 # <class 'str'>
 
+---
 
-# 문자열 따옴표
+## 문자열 따옴표
 
 # ""와 '' 동일하게 사용 가능
 a = "John"
@@ -91,8 +97,9 @@ b = 'John'
 print(a)
 print(b)
 
+---
 
-# 대소문자 구분
+## 대소문자 구분
 
 # Python은 대소문자를 구분함
 a = 4
@@ -101,8 +108,9 @@ A = "Sally"
 print(a)
 print(A)
 
+---
 
-# 랜덤 선택
+## 랜덤 선택
 
 # 리스트에서 랜덤으로 하나 선택
 import random
@@ -112,18 +120,22 @@ a = [1, 2, 3]
 
 print(선택)
 
+---
+
 # 반복문 (for)
 
-# 1. range()
+## range()
 
 # range()는 연속된 숫자 생성 (끝 값은 포함 X)
 nums = list(range(0, 10))
 print(nums)
 
-# 실행 결과
+### 실행 결과
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-# 2. 리스트 반복
+---
+
+## 리스트 반복
 
 # 리스트 값을 하나씩 꺼내서 처리
 nums = [1, 2, 3, 4, 5]
@@ -131,15 +143,16 @@ nums = [1, 2, 3, 4, 5]
 for i in nums:
     print(i)
 
-# 실행 결과
+### 실행 결과
 # 1
 # 2
 # 3
 # 4
 # 5
 
+---
 
-# 3. 합계 구하기
+## 합계 구하기
 
 # 반복문으로 누적 계산 가능
 nums = [1, 2, 3, 4, 5]
@@ -150,13 +163,14 @@ for i in nums:
 
 print(total)
 
-# 실행 결과
+### 실행 결과
 # 15
 
+---
 
 # 클래스 (Class)
 
-# 1. 클래스 기본 구조
+## 클래스 기본 구조
 
 # 클래스 = 변수 + 함수 묶음
 class Person:
@@ -166,18 +180,20 @@ class Person:
     def show(self):
         print(self.name)
 
+---
 
-# 2. 객체 생성 및 사용
+## 객체 생성 및 사용
 
 # 클래스를 사용하려면 객체 생성 필요
 p = Person("홍길동")
 p.show()
 
-# 실행 결과
+### 실행 결과
 # 홍길동
 
+---
 
-# 3. 데이터 저장 구조 (딕셔너리 활용)
+## 데이터 저장 구조 (딕셔너리 활용)
 
 # 딕셔너리로 데이터 저장 관리 가능
 class 성적관리:
@@ -196,9 +212,10 @@ s.저장("철수", 90)
 
 print(s.조회("철수"))
 
-# 실행 결과
+### 실행 결과
 # 90
 
+---
 
 # 정리
 
