@@ -36,28 +36,31 @@ print("Learning Python is fun!")
 ## 변수
 
 # 변수는 값을 저장하는 공간
+"""
 x = 5
 y = "John"
 
 print(x)
 print(y)
-
+"""
 # 같은 변수에 다른 타입 저장 가능
+"""
 x = 4
 x = "Sally"
 
 print(x)
-
+"""
 ### 실행 결과
-# 5
-# John
-# Sally
+5
+John
+Sally
 
 ---
 
 ## 형 변환 (Casting)
 
 # 데이터 타입을 원하는 형태로 변환
+"""
 x = str(3)
 y = int(3)
 z = float(3)
@@ -65,61 +68,65 @@ z = float(3)
 print(x)
 print(y)
 print(z)
-
+"""
 ### 실행 결과
-# 3
-# 3
-# 3.0
+3
+3
+3.0
 
 ---
 
 ## 타입 확인
 
 # type()으로 변수 타입 확인
+"""
 x = 5
 y = "John"
 
 print(type(x))
 print(type(y))
-
+"""
 ### 실행 결과
-# <class 'int'>
-# <class 'str'>
+<class 'int'>
+<class 'str'>
 
 ---
 
 ## 문자열 따옴표
 
 # ""와 '' 동일하게 사용 가능
+"""
 a = "John"
 b = 'John'
 
 print(a)
 print(b)
-
+"""
 ---
 
 ## 대소문자 구분
 
 # Python은 대소문자를 구분함
+"""
 a = 4
 A = "Sally"
 
 print(a)
 print(A)
-
+"""
 ---
 
 ## 랜덤 선택
 
 # 리스트에서 랜덤으로 하나 선택
+"""
 import random
 
 a = [1, 2, 3]
 선택 = random.choice(a)
 
 print(선택)
-
+"""
 ---
 
 # 반복문 (for)
@@ -127,34 +134,37 @@ print(선택)
 ## range()
 
 # range()는 연속된 숫자 생성 (끝 값은 포함 X)
+"""
 nums = list(range(0, 10))
 print(nums)
-
+"""
 ### 실행 결과
-# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ---
 
 ## 리스트 반복
 
 # 리스트 값을 하나씩 꺼내서 처리
+"""
 nums = [1, 2, 3, 4, 5]
 
 for i in nums:
     print(i)
-
+"""
 ### 실행 결과
-# 1
-# 2
-# 3
-# 4
-# 5
+1
+2
+3
+4
+5
 
 ---
 
 ## 합계 구하기
 
 # 반복문으로 누적 계산 가능
+"""
 nums = [1, 2, 3, 4, 5]
 total = 0
 
@@ -162,7 +172,7 @@ for i in nums:
     total += i
 
 print(total)
-
+"""
 ### 실행 결과
 # 15
 
@@ -173,21 +183,23 @@ print(total)
 ## 클래스 기본 구조
 
 # 클래스 = 변수 + 함수 묶음
+"""
 class Person:
     def __init__(self, name):
         self.name = name
 
     def show(self):
         print(self.name)
-
+"""
 ---
 
 ## 객체 생성 및 사용
 
 # 클래스를 사용하려면 객체 생성 필요
+"""
 p = Person("홍길동")
 p.show()
-
+"""
 ### 실행 결과
 # 홍길동
 
@@ -196,6 +208,7 @@ p.show()
 ## 데이터 저장 구조 (딕셔너리 활용)
 
 # 딕셔너리로 데이터 저장 관리 가능
+"""
 class 성적관리:
     def __init__(self):
         self.데이터 = {}
@@ -211,14 +224,14 @@ s = 성적관리()
 s.저장("철수", 90)
 
 print(s.조회("철수"))
-
+"""
 ### 실행 결과
-# 90
+90
 
 ---
 
 # 정리
 
-# 반복문과 클래스는 프로그램 구조의 핵심
-# 직접 구현하면서 이해도가 증가하는 중
-# 간단한 데이터 저장/조회 구조 구현 가능
+반복문과 클래스는 프로그램 구조의 핵심
+직접 구현하면서 이해도가 증가하는 중
+간단한 데이터 저장/조회 구조 구현 가능
