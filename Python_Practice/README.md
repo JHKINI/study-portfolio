@@ -1,181 +1,207 @@
-# 아웃풋
-```
-# Print "Hello World!"
+# Python 기초 정리
+
+# 출력 (print)
+
+# print는 값을 화면에 출력할 때 사용
 print("Hello, World!")
-# Print "Have a good day."
+
 print("Have a good day.")
-# Print "Learning Python is fun!"
+
 print("Learning Python is fun!")
-```
-### 실행 결과
-```
-Hello, World!
-Have a good day.
-Learning Python is fun!
-```
+
+# 실행 결과
+# Hello, World!
+# Have a good day.
+# Learning Python is fun!
 
 
-# 주석처리 하기
-```
-# Write a single-line comment
-#This is a comment
-# Comment out this line so it does not run:
-#print("This should not run")#
-```
-# Add a multiline comment
-```
+# 주석 처리
+
+# 한 줄 주석
+# This is a comment
+
+# 실행 막기
+# print("This should not run")
+
 """
-This is a multiiline
-comment
+여러 줄 주석
 """
 
-```
+# 코드 설명하거나 실행 제외할 때 사용
+
 
 # 변수
-```
-x=5
-y="John"
+
+# 변수는 값을 저장하는 공간
+x = 5
+y = "John"
+
 print(x)
 print(y)
 
+# 같은 변수에 다른 타입 저장 가능
 x = 4
 x = "Sally"
-print(x)
-```
-### 실행 결과
-```
-5
-John
-Sally
-```
 
-# 변수_캐스팅
-```
+print(x)
+
+# 실행 결과
+# 5
+# John
+# Sally
+
+
+# 형 변환 (Casting)
+
+# 데이터 타입을 원하는 형태로 변환
 x = str(3)
 y = int(3)
 z = float(3)
+
 print(x)
 print(y)
 print(z)
-```
-### 실행 결과
-```
-3
-3
-3.0
-```
-# 변수_타입구하기
-```
-x=5
-y="John"
+
+# 실행 결과
+# 3
+# 3
+# 3.0
+
+
+# 타입 확인
+
+# type()으로 변수 타입 확인
+x = 5
+y = "John"
+
 print(type(x))
 print(type(y))
-```
-### 실행 결과
-```
-<class 'int'>
-<class 'str'>
-```
 
-# "" 와''차이
-```
+# 실행 결과
+# <class 'int'>
+# <class 'str'>
+
+
+# 문자열 따옴표
+
+# ""와 '' 동일하게 사용 가능
 a = "John"
 b = 'John'
+
 print(a)
 print(b)
-```
-### 실행 결과
-```
-John
-John
-```
+
 
 # 대소문자 구분
-```
-a=4
-A="Sally"
+
+# Python은 대소문자를 구분함
+a = 4
+A = "Sally"
+
 print(a)
 print(A)
-```
-### 실행 결과
-```
-4
-Sally
-```
-# 변수이름
 
-```
+
+# 랜덤 선택
+
+# 리스트에서 랜덤으로 하나 선택
 import random
-a=[1,2,3]
-선택= random.choice(a)
+
+a = [1, 2, 3]
+선택 = random.choice(a)
+
 print(선택)
-```
 
-# 반복문을 활용한 데이터 처리 기초
+# 반복문 (for)
 
-## 1. range()
+# 1. range()
 
-range()는 연속된 숫자 범위를 생성하는 함수이다.
-
-- 기본 형태: range(시작, 끝, 간격)
-- 끝 값은 포함되지 않는다.
-
-```python
+# range()는 연속된 숫자 생성 (끝 값은 포함 X)
 nums = list(range(0, 10))
 print(nums)
-```
 
-### 실행 결과
-```
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# 실행 결과
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
----
+# 2. 리스트 반복
 
-## 2. for문을 이용한 데이터 처리
-
-리스트 데이터를 반복문으로 하나씩 꺼내 처리할 수 있다.
-
-```python
+# 리스트 값을 하나씩 꺼내서 처리
 nums = [1, 2, 3, 4, 5]
 
 for i in nums:
     print(i)
-```
 
-### 실행 결과
-```
-1
-2
-3
-4
-5
-```
+# 실행 결과
+# 1
+# 2
+# 3
+# 4
+# 5
 
----
 
-## 3. 반복문 활용 예시 (합계 구하기)
+# 3. 합계 구하기
 
-반복문을 이용하면 여러 값의 합을 쉽게 구할 수 있다.
-
-```python
+# 반복문으로 누적 계산 가능
 nums = [1, 2, 3, 4, 5]
 total = 0
 
 for i in nums:
-    total = total + i
+    total += i
 
 print(total)
-```
 
-### 실행 결과
-```
-15
-```
+# 실행 결과
+# 15
 
----
 
-## 📌 느낀 점
+# 클래스 (Class)
 
-- 반복문을 이용하면 여러 데이터를 효율적으로 처리할 수 있다.
-- 특히 합계 계산처럼 데이터 분석의 기초 작업에 활용될 수 있다.
-- 아직은 익숙하지 않지만 점점 이해하고 있다.
+# 1. 클래스 기본 구조
+
+# 클래스 = 변수 + 함수 묶음
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):
+        print(self.name)
+
+
+# 2. 객체 생성 및 사용
+
+# 클래스를 사용하려면 객체 생성 필요
+p = Person("홍길동")
+p.show()
+
+# 실행 결과
+# 홍길동
+
+
+# 3. 데이터 저장 구조 (딕셔너리 활용)
+
+# 딕셔너리로 데이터 저장 관리 가능
+class 성적관리:
+    def __init__(self):
+        self.데이터 = {}
+
+    def 저장(self, 이름, 점수):
+        self.데이터[이름] = 점수
+
+    def 조회(self, 이름):
+        return self.데이터.get(이름, "없음")
+
+
+s = 성적관리()
+s.저장("철수", 90)
+
+print(s.조회("철수"))
+
+# 실행 결과
+# 90
+
+
+# 정리
+
+# 반복문과 클래스는 프로그램 구조의 핵심
+# 직접 구현하면서 이해도가 증가하는 중
+# 간단한 데이터 저장/조회 구조 구현 가능
