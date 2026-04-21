@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레드향 주문하기</title>
+  <!-- <link rel="stylesheet" href="css/order.css"> -->
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>진로면담 신청서 작성</h1>
+    <form>
+      <fieldset>
+        <legend>배송 정보</legend>
+        <ul id="shipping">
+          <li>
+            <label for="user-name">이름/ID </label>
+            <input type="text" id="user-name">
+          </li>
+          <li>
+            <label for="password">password </label>
+            <input type="password" id="password">
+          </li>
+          <li>         
+            <label for="mail">이메일</label>
+            <input type="email" id="mail">
+          </li>  
+          <li>
+            <label for="major">학과 </label>
+            <select name="prod" id="major">  
+  
+     <!--<select name="prod" size="4" multiple>-->
+       <optgroup label="공대">
+      <option value="ai"> 인공지능</option>
+      <option value="rodot"> 로봇공학</option>
+
+      <optgroup label="자연과학">
+      <option value="chemical"> 화학</option>
+      <option value="bio"> 생물학</option>
+
+      <optgroup label="상경계열">
+      <option value="business"> 경영학</option>
+      <option value="trade">무역학 </option>
+
+     </select>
+    </li>      
+          <li>
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone"required placeholder="010-0000-0000">
+          </li>
+          <li>
+            <label for="d-day">상담날짜</label>
+            <input type="date" id="d-day"required>
+          </li>     
+          <li>
+            <label for="d-day">상담시간</label>
+            <input type="time" id="time"required>
+          </li>     
+          <li>
+            <label for="memo">메모</label>
+            <textarea id="memo" cols="20" rows="1"></textarea>
+          </li>  
+        </ul>  
+      </fieldset>
+      <div>
+
+     
+            <br>
+            <input type="submit"/>  
+       
+        <!-- Do it! <button> 태그를 사용해 버튼 삽입하기 -->
+
+      </div>        
+    </form>
+  </div>
+</body>
+</html>
