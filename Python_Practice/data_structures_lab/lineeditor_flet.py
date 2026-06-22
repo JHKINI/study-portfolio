@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import flet as ft
-
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE_PATH = os.path.join(BASE_DIR, "test.txt")
 
 def main(page: ft.Page):
     page.title = "라인 편집기"
@@ -42,7 +44,7 @@ def main(page: ft.Page):
     def load_file(e):
         doc.clear()
 
-        infile = open("test.txt", "r", encoding="utf-8")
+        infile = open(FILE_PATH, "r", encoding="utf-8")  # 읽기
         for line in infile:
             doc.append(line.strip())
         infile.close()
@@ -50,7 +52,7 @@ def main(page: ft.Page):
         refresh()
 
     def save_file(e):
-        outfile = open("test.txt", "w", encoding="utf-8")
+        outfile = open(FILE_PATH, "w", encoding="utf-8")  # 읽기
         for line in doc:
             outfile.write(line + "\n")
         outfile.close()
