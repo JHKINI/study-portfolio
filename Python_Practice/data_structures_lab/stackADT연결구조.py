@@ -1,29 +1,34 @@
 # -*- coding: utf-8 -*-
-# 배열 기반 StackADT 구현
+# 연결 구조 기반 StackADT 구현
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.link = None
+
 
 class StackADT:
 
-    def __init__(self, max_size=10):
-        self.max_size = max_size
-        self.items = [None] * max_size
-        self.top = -1
+    def __init__(self):
+        self.top = None
+        self.count = 0
 
     # 공백 검사
     def isEmpty(self):
-        return self.top == -1
+        return self.top is None
 
     # 포화 검사
     def isFull(self):
-        return self.top == self.max_size - 1
+        return False
 
     # Push(e)
     def push(self, e):
-        if self.isFull():
-            print("스택이 가득 참")
-            return
+        new_node = Node(e)
 
-        self.top += 1
-        self.items[self.top] = e
+        new_node.link = self.top
+        self.top = new_node
+
+        self.count += 1
 
     # Pop()
     def pop(self):
@@ -31,9 +36,11 @@ class StackADT:
             print("스택이 비어 있음")
             return None
 
-        item = self.items[self.top]
-        self.items[self.top] = None
-        self.top -= 1
+        item = self.top.data
+        self.top = self.top.link
+
+        self.count -= 1
+
         return item
 
     # Peek()
@@ -41,20 +48,31 @@ class StackADT:
         if self.isEmpty():
             return None
 
-        return self.items[self.top]
+        return self.top.data
 
     # Size()
     def size(self):
-        return self.top + 1
+        return self.count
 
     # Clear()
     def clear(self):
-        self.items = [None] * self.max_size
-        self.top = -1
+        self.top = None
+        self.count = 0
 
-    # 출력용
+    # 출력
     def display(self):
-        print(self.items[:self.top + 1])
+
+        current = self.top
+        result = []
+
+        while current is not None:
+            result.append(current.data)
+            current = current.link
+
+        print(result)
+
+
+# 테스트
 
 stack = StackADT()
 

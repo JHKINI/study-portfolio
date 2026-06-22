@@ -86,7 +86,9 @@ def eval_infix(expr):
                 values.push(apply_op(a, b, op))
 
             ops.push(token)
-
+        else:
+            raise ValueError("잘못된 수식")
+        
     while not ops.isEmpty():
         op = ops.pop()
         b = values.pop()
