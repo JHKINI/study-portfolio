@@ -40,7 +40,7 @@ class SetADT:
                 return removed
         return None
 
-    def size_func(self):
+    def size(self):
         return self.size
 
     def display(self):
